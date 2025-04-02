@@ -2,6 +2,12 @@
 {
     private CEOSubIF[] subs;
     private List<Decision> da = new List<Decision>();
+    private string name;
+
+    public CEO(string name)
+    {
+        this.name = name;
+    }
 
     public void seeDanger()
     {
@@ -32,10 +38,17 @@
         {
             m.evacuate();
         }
+
+        evacuate();
     }
 
     private Decision grant(Decision[] da)
     {
         return null;
+    }
+
+    public void evacuate()
+    {
+        Console.WriteLine("The CEO is evacuating the building.");
     }
 }
