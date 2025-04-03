@@ -1,4 +1,4 @@
-﻿public class ProjectLeader : RSupIF, MSubIF, CEOSubIF
+public class ProjectLeader : RSupIF, MSubIF, CEOSubIF
 {
     private List<PSSubIF> subs = new List<PSSubIF>();
     private PSSupIF superior;
@@ -9,6 +9,15 @@
         this.name = name;
     }
 
+    public void addSub(PSSubIF sub)
+    {
+        this.subs.Add(sub);
+    }
+    public void setSuperior(PSSupIF superior)
+    {
+        this.superior = superior;
+    }
+
     public string provideInfo()
     {
         return "Information from " + name;
@@ -16,19 +25,19 @@
 
     public void evacuate()
     {
-        foreach(PSSubIF sub in subs)
-        {
-            sub.evacuate();
-        }
+        Console.WriteLine(name + " is evacuating the building.");
     }
 
     public void seeDanger()
     {
         foreach(PSSubIF sub in subs)
         {
-            sub.fixIt();
+            RegularWorker s = (RegularWorker) sub;
+            s.fixIt();
         }
 
-        superior.seeDanger(this);
+        Manager m = (Manager) superior;
+        m.seeDanger(this);
+        
     }
 }

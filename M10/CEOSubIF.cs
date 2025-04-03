@@ -1,3 +1,4 @@
-﻿public interface CEOSubIF
+public interface CEOSubIF
 {
+    void evacuate();
 }

@@ -1,3 +1,4 @@
-﻿public interface MSupIF
+public interface MSupIF
 {
+    public void seeDanger();
 }

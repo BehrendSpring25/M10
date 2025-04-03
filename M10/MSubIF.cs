@@ -1,3 +1,4 @@
-﻿public interface MSubIF
+public interface MSubIF
 {
+    void evacuate();
 }

@@ -1,3 +1,5 @@
-﻿public interface PSSupIF
+public interface PSSupIF
 {
+    public void seeDanger();
+    
 }

@@ -1,3 +1,5 @@
-﻿public interface PSSubIF
+public interface PSSubIF
 {
+    void evacuate();
+    
 }
